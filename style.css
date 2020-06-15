@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(238, 237, 237, 0.904);
+}
+h2{
+    text-align: center;
+}
+h4{
+    text-align: center;
+    margin:0px;
+}
+.box{
+    width: 80%;
+    margin: auto;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    display: grid;
+    grid-template-areas: 
+    "total active cured dead";
+    grid-template-columns: repeat(4, 1fr);
+}
+.item{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align:center;
+    color: black;
+}
+
+.item i{
+    font-size: 1.2rem;
+}
+.item span{
+    font-size: 2rem;
+}
+.total{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    grid-area: total;
+    background-color: rgb(0, 204, 255);
+}
+.aktif{
+    grid-area: active;
+    background-color: rgb(0, 132, 255);
+}
+.cured{
+    grid-area: cured;
+    background-color: rgba(36, 253, 36, 0.747);
+}
+.dead{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    grid-area: dead;
+    background-color: rgba(255, 0, 0, 0.918);
+}
+li {
+    list-style:none;
+}
+.table{
+    display:grid;
+    margin:auto;
+    padding:0px;
+    border:2px solid white;
+    width:90%;
+    grid-template-columns: 1fr repeat(4, 1fr);
+    text-align:center;
+}
+.title{
+    padding:2px;
+    text-align: center;
+    background-color: darkgrey;
+}
+.title i{
+    font-size:0rem;
+}
+.data_odd{
+    background-color: aliceblue;
+}
+.data{
+    background-color: beige;
+}
+footer{
+    position: fixed;
+    text-align: center;
+    background-color: white;
+    width:100%;
+    margin:0px;
+    bottom:0px;
+}
+@media screen and (max-width: 715px){
+    .box{
+        grid-template-areas: 
+        "total active"
+        "cured dead";
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .total{
+        border-bottom-left-radius: 0px;
+    }
+    .aktif{
+        border-top-right-radius: 15px;
+    }
+    .dead{
+        border-top-right-radius: 0px;
+    }
+    .cured{
+        border-bottom-left-radius: 15px;
+    }
+}
+@media screen and (max-width: 550px){
+    .dat{
+        font-size: 0rem;
+    }
+    .title i{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 500px){
+    .box{
+        grid-template-areas: 
+        "total"
+        "active"
+        "cured"
+        "dead";
+        grid-template-columns:1fr;
+    }
+    .cured{
+        border-bottom-left-radius: 0px;
+    }
+    .aktif{
+        border-top-right-radius: 0px;
+    }
+    .total{
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 15px;
+    }
+    .dead{
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 15px;
+    }
+}
